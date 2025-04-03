@@ -6,14 +6,9 @@ import { getWaypoint } from "./types/waypoint.js";
 console.log("SpaceTraders!");
 
 async function main() {
-	const agentData = await getAgent();
-	console.log(agentData);
-
+	const agent = await getAgent();
 	const contracts = await getContracts();
-	console.log(contracts);
-
-	const waypoint = await getWaypoint(agentData.headquarters);
-	console.log(waypoint);
+	const waypoint = await getWaypoint(agent.headquarters);
 }
 
 main();
